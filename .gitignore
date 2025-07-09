@@ -1,0 +1,44 @@
+# python build/runtime artifacts
+__pycache__/
+*py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+MANIFEST
+
+# python virtual environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# build/distribution directories
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/var/
+wheels/
+.installed.cfg
+
+# testing & coverage artifacts
+.coverage
+htmlcov/
+.pytest_cache/
+
+# os/editor specific
+.DS_Store
+
+# image files
+*.png
+*.jpg
+*.jpeg
