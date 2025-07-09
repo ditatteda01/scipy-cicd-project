@@ -2,6 +2,8 @@ from src.data_processor import DataProcessor
 import json
 
 def main():
+    print("Hello CICD Project!")
+    
     processor = DataProcessor()
     
     # Load or generate data
