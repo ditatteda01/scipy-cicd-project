@@ -133,4 +133,16 @@ class TestDataProcessor:
         with pytest.raises(ValueError, match="Data not loaded. Please load data first."):
             self.processor.generate_plot(save_path='test_plot.png')
 
-    
+    def test_advanced_statistics(self):
+        """Test advanced statistical analysis."""
+        self.processor.load_data()
+        stats = self.processor.advanced_statistics()
+
+        # Check if the summary contains expected keys
+        required_keys = ['skewness_x',
+                         'skewness_y',
+                         'kurtosis_x',
+                         'kurtosis_y']
+        for key in required_keys:
+            assert key in stats
+            assert isinstance(stats[key], float)

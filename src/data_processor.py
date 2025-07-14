@@ -95,3 +95,19 @@ class DataProcessor:
         plt.savefig(save_path)
         plt.close()
         return save_path
+
+    def advanced_statistics(self):
+        """Advanced statistical analysis."""
+        if self.data is None:
+            raise ValueError("Data not loaded. Please load data first.")
+
+        from scipy import stats
+
+        # Perform additional statistical tests
+        results = {
+            "skewness_x": stats.skew(self.data["x"]),
+            "skewness_y": stats.skew(self.data["y"]),
+            "kurtosis_x": stats.kurtosis(self.data["x"]),
+            "kurtosis_y": stats.kurtosis(self.data["y"]),
+        }
+        return results
