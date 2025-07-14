@@ -146,7 +146,3 @@ class TestDataProcessor:
         for key in required_keys:
             assert key in stats
             assert isinstance(stats[key], float)
-
-    def test_failing_example(self):
-        """This test will fail"""
-        assert False, "This is a failing test example"
